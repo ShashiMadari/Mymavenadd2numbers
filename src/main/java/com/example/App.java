@@ -1,6 +1,6 @@
 package com.example;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class App {
     // Method to add two numbers
@@ -10,19 +10,14 @@ public class App {
 
     // Main method
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
-        // Prompt user for input
-        System.out.print("Enter the first number: ");
-        int num1 = scanner.nextInt();
-
-        System.out.print("Enter the second number: ");
-        int num2 = scanner.nextInt();
+        // Generate two random integers between 1 and 100
+        int num1 = random.nextInt(100) + 1;
+        int num2 = random.nextInt(100) + 1;
 
         // Calculate and display the result
         int sum = addNumbers(num1, num2);
         System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
     }
 }
-
-
